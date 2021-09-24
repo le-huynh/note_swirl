@@ -1,2 +1,2 @@
-# Le_swirl_note
-Personal notes from `swirl` Rpackage 
+# Notes_swirl_package
+Code and personal notes from `swirl` Rpackage.
