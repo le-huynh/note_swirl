@@ -1,5 +1,7 @@
 #https://www.ling.upenn.edu/~joseff/rstudy/index.html
 
+# change R system language into English
+Sys.setenv(LANG = "en")
 
 ###Lesson 2: Basic Building Blocks 
 # assignment operator: <-
