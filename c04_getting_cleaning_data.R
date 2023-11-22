@@ -1,4 +1,5 @@
-### Lesson 1: Manipulating Data with dplyr
+
+# Lesson 1: Manipulating Data with dplyr #-------------------
 
 library(dplyr)
 packageVersion("dplyr")
@@ -32,7 +33,7 @@ mutate(cran3, size_mb = size / 2^20, size_gb = size_mb/2^10)   #add 2 new column
 summarize(cran, avg_bytes = mean(size))  #mean value of the 'size' varialbe -> single number
 
 
-### Lesson 2: Grouping + Chaining (dplyr)
+# Lesson 2: Grouping + Chaining (dplyr) #---------------
 
 group_by() #break up dataset into groups of rows based on values of 1 / more variables
 
@@ -128,7 +129,7 @@ cran %>%
 
 
 
-### Lesson 3: Tidying Data with tidyr
+# Lesson 3: Tidying Data with tidyr #------------------
 # paper 'Tidy Data' - Hadley Wickham
 #http://vita.had.co.nz/papers/tidy-data.pdf
 
@@ -197,7 +198,7 @@ sat %>%
 
 
 
-### Lesson 4: Dates and Times with 'lubridate'
+# Lesson 4: Dates and Times with 'lubridate' #-----------------
 Sys.getlocale("LC_TIME")
 help(package = lubridate)
 

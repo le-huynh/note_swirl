@@ -1,7 +1,7 @@
 # https://www.ling.upenn.edu/~joseff/rstudy/index.html
 
 
-### Lesson 9: Functions
+# Lesson 9: Functions #---------------
 #input to function -> called -> argument
 #providing arguments to a function -> called -> passing arguments to function
 
@@ -108,7 +108,7 @@ if (condition) {
   ## do sth different
 }
 
-### Lesson 10: tapply + sapply
+# Lesson 10: tapply + sapply #----------------
 # 'The Split-Apply-Combine Strategy for Data Analysis'
 # Author: Hadley Wickham
 # Journal of Statistical Software
@@ -152,7 +152,7 @@ red  green   blue   gold  white  black orange
 range()  # minimum + maximum of all given arguments
 unique() # returns a vector/data frame/array like x but with duplicate elements/rows removed
 
-### Lesson 11: Vapply + tapply
+# Lesson 11: Vapply + tapply #----------------------
 
 # s-apply -> 'guess' correct format of result
 # v-apply -> If the result doesn't match the format you specify, vapply() -> throw an error, causing the operation to stop. This can
@@ -176,7 +176,7 @@ unique() # returns a vector/data frame/array like x but with duplicate elements/
 
 
 
-### Lesson 13: Simulation
+# Lesson 13: Simulation #--------------------
 # generate random numbers
 sample()
 sample(1:6, 4, replace = TRUE) #randomly select 4 numbers between 1 and 6, with replacement
@@ -208,7 +208,7 @@ colMeans() # return mean of each column in data frames
 
 hist()     # plot histogram
 
-### Lesson 14: Dates + Times
+# Lesson 14: Dates + Times #--------------------
 ## important: 'lubridate' package by Hadley Wickham
 
 #useful with time-series data
@@ -245,7 +245,7 @@ Time difference of 0.01103487 days
 
 
 
-### Lesson 15: Base Graphics
+# Lesson 15: Base Graphics #-------------------
 # advanced graphics in R: package 'lattice' - 'ggplot2' - 'ggvis'
 
 plot() #short for 'scatterplot'

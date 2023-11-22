@@ -3,7 +3,7 @@
 # change R system language into English
 Sys.setenv(LANG = "en")
 
-###Lesson 2: Basic Building Blocks 
+# Lesson 2: Basic Building Blocks #---------------- 
 # assignment operator: <-
 # vector = small collection of numbers
 # data structure = any object that contains data
@@ -74,7 +74,7 @@ rep(c(0,1,2), each=10)    #create a vector that contains 10 zeros, then 10 ones,
 
 
 
-###Lesson 4: vectors
+# Lesson 4: vectors #------------------
 ##vector:
 # + atomic vector: contain exactly 1 data type -> numeric / logical / character / interger / complex
 # + list: contain multiple data types
@@ -102,7 +102,7 @@ paste(1:3,c("X","Y","Z"),sep = "")
 paste(LETTERS,1:4,sep = "-")
 [1] "A-1" "B-2" "C-3" "D-4" "E-1" "F-2" "G-3" "H-4" "I-1" "J-2" "K-3" "L-4" "M-1" "N-2" "O-3" "P-4" "Q-1" "R-2" "S-3" "T-4" "U-1" "V-2" "W-3" "X-4" "Y-1" "Z-2"
 
-### Lesson 5:  Missing Data
+# Lesson 5:  Missing Data #--------------------
 #NA = not available
 #NaN = not a number
 
@@ -114,7 +114,7 @@ my_data == NA
 #NA not really a value, just a placeholder for a quantity that is not available
 # -> logical expression is incomplete -> result = all NA
 
-### Lesson 6: Subsetting Vectors
+# Lesson 6: Subsetting Vectors #---------------------
 
 subset()
 
@@ -153,7 +153,7 @@ identical(vect,vect2) #check if 2 vectors are EXACTLY equal
 vect["bar"]
 vect[c("foo","bar")]
 
-### Lesson 7: Matrix + Dataframe
+# Lesson 7: Matrix + Dataframe #------------------------
 # used to store tabular data (rows + columns)
 # matrix: contain ONLY a single class of data
 # dataframe: consist MANY different classes of data
@@ -177,7 +177,7 @@ cbind(x,y) #combine columns x and y into matrix -> single class of data -> R "co
 
 data.frame(x, y) #store different classes of data (character, number,...)
 
-### Lesson 8: Logic
+# Lesson 8: Logic #-----------------
 # && -> AND -> only evaluate first element of 1 vector
 > TRUE & c(TRUE, FALSE, FALSE)
 [1]  TRUE FALSE FALSE
@@ -202,7 +202,7 @@ any()   #TRUE if one or more of the elements in the logical vector is TRUE
 all()   #TRUE if every element in the logical vector is TRUE
 
 
-### Lesson 9: Workspace + Files
+# Lesson 9: Workspace + Files #---------------------
 
 getwd()   #current wroking directory
 setwd()   #set working directory
@@ -232,7 +232,7 @@ dir.create(file.path("folder1","folder2"),recursive = TRUE)
 #create folder1 in wd, then subdirectory called folder2
 
 
-### Lesson 10: Reading Tabular Data
+# Lesson 10: Reading Tabular Data #----------------------
 # 'readr' package
 #Section 1.3 of the book "Mastering Software Development in R"
 
@@ -253,7 +253,7 @@ urban <- read_csv(datafile, col_types = "cccd-", n_max= 100)
 #read only 100 first columns
 
 
-### Lesson 11: Looking at data
+# Lesson 11: Looking at data #-------------------
 # look at the data before treating it
 
 # What is the format of the data? 
@@ -279,7 +279,7 @@ split()
 
 
 
-### Lesson 11: Data Manipulation [??????????]
+# Lesson 12: Data Manipulation #-------------------
 wc_4 <- worldcup %>% 
   select(Time, Passes, Tackles, Saves) %>%
   summarize(Time = mean(Time),
@@ -304,7 +304,7 @@ titanic_4 <- titanic %>%
 
 
 
-### Lesson 13: Text Manipulation Functions
+# Lesson 13: Text Manipulation Functions #--------------------
 is.character() # TRUE if object is string = character
 
 >paste("Square","Circle","Triangle")
@@ -333,7 +333,7 @@ is.character() # TRUE if object is string = character
 [1] "caps"  "low"   "title"
 
 
-### Lesson 14: Regular Expressions = "regex"
+# Lesson 14: Regular Expressions = "regex" #----------------------
 # regular expression = string that defines a pattern that could be contained within another string
 # Use: + search for a string
 #      + search within a string
@@ -409,7 +409,7 @@ grepl("(i.{2}){3}", "Mississippi")  #"i" followed by 2 of any character, with th
 [1] "Alabama"  "Alaska"   "Arizona"  "Idaho"    "Indiana"  "Iowa"     "Ohio"     "Oklahoma"
 
 
-### Lesson 15: The Stringr Package
+# Lesson 15: The Stringr Package #----------------------
 
 > grepl("[Ii]", c("Hawaii", "Illinois", "Kentucky"))
 [1]  TRUE  TRUE FALSE

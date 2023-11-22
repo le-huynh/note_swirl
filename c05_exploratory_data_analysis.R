@@ -1,6 +1,6 @@
 ### EXPLORATOTY DATA ANALYSIS
 
-### Lesson 1: Principles of Analytic Graphs
+# Lesson 1: Principles of Analytic Graphs #----------------
 # Book: "Beautiful Evidence" - Edward Tufte
 # www.edwardtufte.com
 
@@ -16,7 +16,7 @@
 # a trend that appears in different groups of data disappears when these groups are combined
 
 
-### Lesson 2: Exploratory Graphs
+# Lesson 2: Exploratory Graphs #-----------------------
 #usage:
 # + understand data properties
 # + find patterns in data
@@ -65,7 +65,7 @@ with()
 with(pollution, plot(latitude, pm25))
 plot(pollution$latitude,ppm,col=pollution$region)
 
-### Lesson 3: Graphic devices in R
+# Lesson 3: Graphic devices in R #---------------
 ?Devices
 dev.cur() #show current plotting devices
 
@@ -112,7 +112,7 @@ dev.off()
 
 
 
-### Lesson 4: Plotting systems
+# Lesson 4: Plotting systems #----------------------
 ## Base plotting system
 # 'Artist's palette' model = start with a blank canvas -> buitl the plot up step by step
 # [disadvantage] CANT go back once a plot has started
@@ -139,7 +139,7 @@ xyplot(Life.Exp~Income | region, data = state, layout = c(4,1))
 qplot(displ,hwy,data = mpg)
 
 
-### Lesson 5: Base plotting system
+# Lesson 5: Base plotting system #----------------------
 # = 'base' + 'grDevice' = function (plot, hist, etc) + (pdf, png, etc)
 
 range(airquality$Ozone,na.rm = TRUE)
@@ -171,7 +171,7 @@ mtext()   #adds arbitrary text to outer / inner margins of the plot
 axis()    #adds axis ticks + labels
 legend()  
 
-#-----Eg.-------
+##-----Eg.-------
 plot(airquality$Wind,airquality$Ozone,type = "n")  #set up the plot but not put data in it
 title(main="Wind and Ozone in NYC" )
 may <- subset(airquality,Month ==5)
@@ -185,7 +185,7 @@ par(mfrow = c(1, 3), mar = c(4, 4, 2, 1),oma = c(0, 0, 2, 0))
 mtext("Ozone and Weather in New York City",outer = TRUE)
 
 
-### Lesson 6: Lattice plotting system
+# Lesson 6: Lattice plotting system #-------------------
 # lattice system = 'lattice' + 'grid'
 ## 'lattice' function
 xyplot()     #scatterplot
@@ -231,14 +231,14 @@ p2 <- xyplot(y ~ x | f, panel = function(x, y, ...) {
 print(p2)
 invisible()
 
-----Eg.----
+##----Eg.----
 table(diamonds$color,diamonds$cut)
 xyplot(price~carat | color*cut,data=diamonds,strip = FALSE,pch=20,xlab = myxlab,ylab = myylab,main=mymain)
 #35 panels, one for each combination of color and cut
 #The dots (pch=20) show how prices for the diamonds in each category (panel) vary depending on carat
 
 
-### Lesson 7: Working with Colors
+# Lesson 7: Working with Colors #------------------
 colors()           # list 657 colors can be used in any plotting function
 colorRamp()        #takes a palette of colors (arguments) -> returns a function (arguments = 0-1)
 # 0 - 1: extremes of color palette
@@ -261,9 +261,7 @@ pal(0.5) # result = palette of red + blue    = (127.5,0,127.5)
 [6,]    0    0  255
 
 
-
-
-### Lesson: GGPlot2
+# Lesson 8: GGPlot2 #---------------------
 ## gg = 'grammar of graphic
 
 qplot()
@@ -282,3 +280,5 @@ ggplot()
 #buitl up plot in layers: + plot the data
 #                         + overlay a summary
 #                         + metadata + annotation
+
+
