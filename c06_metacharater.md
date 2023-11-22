@@ -1,5 +1,5 @@
 | Metacharacter | Meaning   |
-|:--------------|:---------:|
+|:--------------|:----------|
 | .             | Any Character
 |   \w	        | A Word
 |   \W	        | Not a Word
